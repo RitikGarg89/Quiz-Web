@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Website</title>
+    <meta name="description" content="Engaging and interactive quiz experience with premium glassmorphic design.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="app-container">
+        <!-- Splash Screen -->
+        <section id="splash-screen" class="screen active">
+            <div class="glass-card central-card fade-in">
+                <h1 class="title">Interactive Quiz</h1>
+                <p class="subtitle">Test your knowledge in style</p>
+                <button id="start-btn" class="primary-btn">Start Quiz</button>
+            </div>
+        </section>
+
+        <!-- Quiz Screen -->
+        <section id="quiz-screen" class="screen">
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+            <div class="glass-card quiz-card">
+                <div class="quiz-info">
+                    <span id="question-number">Question 1/10</span>
+                    <span id="timer">00:30</span>
+                </div>
+                <h2 id="question-text" class="question">Loading question...</h2>
+                <div id="options-container" class="options-grid">
+                    <!-- Options will be injected here -->
+                </div>
+                <div class="controls">
+                    <button id="next-btn" class="secondary-btn" disabled>Next Question</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Result Screen -->
+        <section id="result-screen" class="screen">
+            <div class="glass-card central-card">
+                <h2 class="title">Quiz Complete!</h2>
+                <div class="score-display">
+                    <span class="score-label">Your Score</span>
+                    <span id="final-score" class="score-value">0/10</span>
+                </div>
+                <p id="result-message" class="subtitle">Great job!</p>
+                <button id="restart-btn" class="primary-btn">Try Again</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
